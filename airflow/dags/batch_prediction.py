@@ -30,7 +30,7 @@ with DAG(
         from sensor.pipeline.batch_prediction import start_batch_prediction
         input_dir = "/app/input_files"
         for file_name in os.listdir(input_dir):
-            #make prediction
+            #make prediction from here
             start_batch_prediction(input_file_path=os.path.join(input_dir,file_name))
     
     def sync_prediction_dir_to_s3_bucket(**kwargs):
